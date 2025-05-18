@@ -40,7 +40,7 @@ npm run dev
 
 ## 3. Setup Vercel Postgres Database
 ### Create postgres database (Serverless SQL)
-- Buka Dashboard [Vercel](vercel.com)
+- Buka Dashboard [Vercel](https://vercel.com)
 - Buka menu storage
 - Klik Create Database
 - Pilih Serverless Potsgres
