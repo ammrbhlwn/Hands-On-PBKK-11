@@ -38,3 +38,12 @@
     </td>
   </tr>
  </table>
+
+## Clone Template Project
+Clone template project melalui repository berikut: **[template-login-register](https://github.com/ammrbhlwn/template-login-register)**
+
+## Install Dependencies
+Setelah berhasil melakukan clone project. Silahkan jalankan perintah berikut:
+```
+npm install
+```
