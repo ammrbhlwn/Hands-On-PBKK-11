@@ -131,19 +131,7 @@ if (process.env.NODE_ENV === 'production') {
 export default prisma;
 ```
 
-## 7. Buat File ``src/lib/auth.ts``
-```
-import NextAuth from "next-auth"
-import { PrismaAdapter } from "@auth/prisma-adapter"
-import prisma from "../../lib/prisma"
- 
-export const { handlers, auth, signIn, signOut } = NextAuth({
-  adapter: PrismaAdapter(prisma),
-  providers: [],
-})
-```
-
-## 8. Buat data seeder ``prisma/seed.ts``
+## 7. Buat data seeder ``prisma/seed.ts``
 [Dokumentasi seeding](https://www.prisma.io/docs/orm/prisma-migrate/workflows/seeding)
 
 - ### Install Bcrypt
@@ -203,7 +191,7 @@ npm install -D typescript ts-node @types/node
 npx prisma db seed
 ```
 
-## 9. Cek Data di Prisma Studio
+## 8. Cek Data di Prisma Studio
 ```
 npx prisma studio
 ```
