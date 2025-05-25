@@ -65,7 +65,7 @@ const handler = NextAuth(authOptions)
 export { handler as GET, handler as POST }
 ```
 
-## 5. Buat file ```authOption.ts``` pada folder ```src/lib```
+## 5. Buat file ```authOptions.ts``` pada folder ```src/lib```
 [Konfigurasi NextJs](https://next-auth.js.org/configuration/nextjs)
 ```
 /* eslint-disable @typescript-eslint/no-explicit-any */
