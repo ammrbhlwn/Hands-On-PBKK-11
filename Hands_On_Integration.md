@@ -48,13 +48,18 @@ Setelah berhasil melakukan clone project. Silahkan jalankan perintah berikut:
 npm install
 ```
 
-## 3. Install NextAuth
+## 3. Jalankan Prisma
+```
+npx prisma generate
+```
+
+## 4. Install NextAuth
 [Instalasi NextAuth](https://next-auth.js.org/getting-started/example)
 ```
 npm install next-auth
 ```
 
-## 4. Buat file ```route.ts``` pada folder ```app/api/auth/[...nextauth]```
+## 5. Buat file ```route.ts``` pada folder ```app/api/auth/[...nextauth]```
 [Instalasi NextAuth](https://next-auth.js.org/configuration/nextjs)
 ```
 import NextAuth from 'next-auth'
@@ -65,7 +70,7 @@ const handler = NextAuth(authOptions)
 export { handler as GET, handler as POST }
 ```
 
-## 5. Buat file ```authOption.ts``` pada folder ```src/lib```
+## 6. Buat file ```authOption.ts``` pada folder ```src/lib```
 [Konfigurasi NextJs](https://next-auth.js.org/configuration/nextjs)
 ```
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -131,7 +136,7 @@ export const authOptions: NextAuthOptions = {
 }
 ```
 
-## 6. Buat file ```middleware.ts``` pada folder ```src```
+## 7. Buat file ```middleware.ts``` pada folder ```src```
 [Konfigurasi NextJs](https://next-auth.js.org/configuration/nextjs)
 ```
 import { NextRequest, NextResponse } from 'next/server'
@@ -163,25 +168,25 @@ export const config = {
 }
 ```
 
-## 7. Install Zod
+## 8. Install Zod
 [Instalasi Zod](https://zod.dev/)
 ```
 npm install zod
 ```
 
-## 8. Install React Hook Form
+## 9. Install React Hook Form
 [Instalasi React Hook Form](https://react-hook-form.com/get-started)
 ```
 npm install react-hook-form
 ```
 
-## 9. Install Hook Form Resolver
+## 10. Install Hook Form Resolver
 [Instalasi Hook Form Resolver](https://www.npmjs.com/package/@hookform/resolvers)
 ```
 npm install @hookform/resolvers
 ```
 
-## 10. Sesuaikan component ```LoginForm.tsx``` pada folder ```(auth)/login/components```
+## 11. Sesuaikan component ```LoginForm.tsx``` pada folder ```(auth)/login/components```
 ```
 import { z } from 'zod'
 
@@ -236,13 +241,13 @@ const onSubmit = async (data: LoginSchema) => {
     redirect: false,
     email: data.email,
     password: data.password,
-    callbackUrl: '/dashboard',
+    callbackUrl: '/',
   })
 
   setLoading(false)
 
   if (res?.ok && !res.error) {
-    router.push('/dashboard')
+    router.push('/')
   } else {
     setLoginError('Invalid email or password')
   }
@@ -295,7 +300,7 @@ Lengkapi component form sebagai berikut:
 )}
 ```
 
-## 11. Lengkapi file ```page.tsx``` pada folder ```src/app```
+## 12. Lengkapi file ```page.tsx``` pada folder ```src/app```
 ```
 'use client'
 
@@ -321,7 +326,7 @@ export default function Home() {
 }
 ```
 
-## 12. Tambahkan file ```provider.tsx``` pada folder ```src/app```
+## 13. Tambahkan file ```provider.tsx``` pada folder ```src/app```
 ```
 'use client'
 
@@ -334,7 +339,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
 }
 ```
 
-## 13. Sesuaikan file ```layout.tsx``` pada folder ```src/app```
+## 14. Sesuaikan file ```layout.tsx``` pada folder ```src/app```
 ```
 import Providers from "./providers";
 
