@@ -40,7 +40,7 @@
  </table>
 
 ## Clone Template Project
-Clone template project melalui repository berikut: **[template-login-register](https://github.com/ammrbhlwn/template-login-register)**
+Clone template project melalui repository berikut: **[template-authentication](https://github.com/ammrbhlwn/template-authentication)**
 
 ## Install Dependencies
 Setelah berhasil melakukan clone project. Silahkan jalankan perintah berikut:
