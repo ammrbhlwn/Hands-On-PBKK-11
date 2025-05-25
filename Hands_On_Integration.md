@@ -258,7 +258,7 @@ Lengkapi component form sebagai berikut:
 ```
 <form
   onSubmit={handleSubmit(onSubmit)}
-  className="flex flex-col gap-6"
+  className="flex flex-col gap-6 w-full"
   {...props}
 >
 
@@ -267,7 +267,7 @@ Lengkapi component form sebagai berikut:
 <Input
   id='email'
   type='email'
-  placeholder='m@example.com'
+  placeholder='helloworld@example.com'
   {...register('email')}
 />
 {errors.email && (
