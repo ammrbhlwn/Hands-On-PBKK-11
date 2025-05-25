@@ -236,13 +236,13 @@ const onSubmit = async (data: LoginSchema) => {
     redirect: false,
     email: data.email,
     password: data.password,
-    callbackUrl: '/dashboard',
+    callbackUrl: '/',
   })
 
   setLoading(false)
 
   if (res?.ok && !res.error) {
-    router.push('/dashboard')
+    router.push('/')
   } else {
     setLoginError('Invalid email or password')
   }
@@ -253,7 +253,7 @@ Lengkapi component form sebagai berikut:
 ```
 <form
   onSubmit={handleSubmit(onSubmit)}
-  className="flex flex-col gap-6"
+  className="flex flex-col gap-6 w-full"
   {...props}
 >
 
@@ -262,7 +262,7 @@ Lengkapi component form sebagai berikut:
 <Input
   id='email'
   type='email'
-  placeholder='m@example.com'
+  placeholder='helloworld@example.com'
   {...register('email')}
 />
 {errors.email && (
