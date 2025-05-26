@@ -117,6 +117,7 @@ export const authOptions: NextAuthOptions = {
         token.id = user.id
         token.name = user.name
         token.email = user.email
+        token.expires = Math.floor(Date.now() / 1000) + 60 * 60 * 24
       }
       return token
     },
@@ -127,6 +128,7 @@ export const authOptions: NextAuthOptions = {
       if ('name' in token) {
         session.user.name = token.name
       }
+      session.expires = new Date(token.expires * 1000).toISOString()
       return session
     },
   },
@@ -309,6 +311,12 @@ import { useSession, signOut } from "next-auth/react";
 
 export default function Home() {
   const { data: session } = useSession()
+
+  ...
+
+  <h1 className="text-xl font-medium text-center">
+    {JSON.stringify(session)}
+  </h1>
 
   ....
 

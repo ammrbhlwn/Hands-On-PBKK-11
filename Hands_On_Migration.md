@@ -81,16 +81,6 @@ model User {
   email     String @unique
   password  String
   role      RoleUser
-  sessions  Session[]
-}
-```
-
-```
-model Session {
-  id        String @id
-  userId    String
-  expiresAt DateTime
-  user      User @relation(references: [id], fields: [userId], onDelete: Cascade)
 }
 ```
 
