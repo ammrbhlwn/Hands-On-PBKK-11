@@ -63,7 +63,7 @@ npm install next-auth
 [Instalasi NextAuth](https://next-auth.js.org/configuration/nextjs)
 ```
 import NextAuth from 'next-auth'
-import { authOptions } from '@/lib/authOptions'
+import { authOptions } from '@/lib/authOption'
 
 const handler = NextAuth(authOptions)
 
